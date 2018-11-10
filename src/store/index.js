@@ -1,31 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import list from './modules/list'
+import cart from './modules/cart'
 
 Vue.use(Vuex);
 
-// state application
-const state = {
-    count: 0
-};
-
-// actions application
-const actions = {
-    increment (context){
-        context.commit('increment');
-    },
-    decrement (context){
-        context.commit('decrement');
-    }
-};
-
-// mutations application
-const mutations = {
-    increment: state => state.count ++,
-    decrement: state => state.count --,
-};
-
 export default new Vuex.Store({
-    state,
-    actions,
-    mutations
+    modules: {
+        list,
+        cart
+    }
 })
