@@ -6,11 +6,11 @@ const state = {
 
 // actions application
 const actions = {
-    cartIncrement (context){
-        context.commit('cartIncrement');
+    cartIncrement ({commit}){
+        commit('cartIncrement');
     },
-    cartDecrement (context){
-        context.commit('cartDecrement');
+    cartDecrement ({commit}){
+        commit('cartDecrement');
     }
 };
 

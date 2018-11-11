@@ -6,11 +6,11 @@ const state = {
 
 // actions application
 const actions = {
-    increment (context){
-        context.commit('increment');
+    increment ({commit}){
+        commit('increment');
     },
-    decrement (context){
-        context.commit('decrement');
+    decrement ({commit}){
+        commit('decrement');
     }
 };
 
