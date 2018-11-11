@@ -1,12 +1,30 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import list from './modules/list'
-import cart from './modules/cart'
+
+import bills from '@/api/bills'
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    modules: {
-        list, cart
+
+    state: {
+        bills: []
+    },
+
+    getters: {},
+
+    actions: {
+        fetchBills ({commit}){
+            bills.getBills(bills => {
+                commit('setBills', bills)
+            })
+        }
+    },
+
+    mutations: {
+        setBills (state, bills){
+            state.bills = bills
+        }
     }
+
 })

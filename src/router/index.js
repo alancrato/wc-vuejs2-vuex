@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import BillPayListComponent from '@/components/bills/pay/list'
+
 import BillsMenu from '@/components/bills/BillsMenu'
 import StateComponent from '@/components/State'
 import StateComponents from '@/components/States'
@@ -16,6 +18,11 @@ export default new Router({
       path: '/',
       name: 'BillsMenu',
       component: BillsMenu
+    },
+    {
+      path: '/bills',
+      name: 'BillPayListComponent',
+      component: BillPayListComponent
     },
     {
       path: '/state',

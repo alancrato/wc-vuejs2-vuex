@@ -1,5 +1,5 @@
 
-// state application
+// state module
 const state = {
     count: 9
 };
